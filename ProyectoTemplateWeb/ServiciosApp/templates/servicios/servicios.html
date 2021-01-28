@@ -1,14 +1,25 @@
 {% extends "ProyectoWebApp/base.html" %} {% load static %} {% block content %}
 
 <H1>SERVICIOS</H1>
+
 <!-- bucle for que mostrará los diversos servicios creados-->
 {% for servicio in servicios %}
 
-<div>
-    <p>
-        <h2>{{servicio.titulo}}</h2>
-        <p>{{servicio.contenido}}</p>
-        <p><img src="{{servicio.imagen.url}}"></p>
-    </p>
+<div class="container">
+    <!-- Heading -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3 mt-5">
+                <img src="{{servicio.imagen.url}}" class=" card-img-top" width="300" height="360" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{servicio.titulo}}</h5>
+                    <p class="card-text">{{servicio.contenido}}</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
+
 {% endfor %} {% endblock %}
