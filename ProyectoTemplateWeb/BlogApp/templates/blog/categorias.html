@@ -1,6 +1,6 @@
 {% extends "ProyectoWebApp/base.html" %} {% load static %} {% block content %}
 
-<H1>BLOG</H1>
+<H1>CATEGORIAS</H1>
 
 <!-- bucle for que mostrará los diversos servicios creados-->
 {% for post in posts %}
@@ -26,8 +26,7 @@
 
 <section>
     <div style="background-color: yellow; text-align: center;">
-        Categorías: {% for post in posts %} {% for categoria in post.categorias.all %} &nbsp;
-        <a href="{% url 'categoria' categoria.id %}">{{categoria.nombre}}</a> {% endfor %} {% endfor %}
+        Categorías: {% for post in posts %} {% for categoria in post.categorias.all %} &nbsp; {{categoria.nombre}} {% endfor %} {% endfor %}
     </div>
 </section>
 
