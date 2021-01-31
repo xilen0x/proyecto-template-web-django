@@ -1,0 +1,12 @@
+{% extends "ProyectoWebApp/base.html" %} {% load static %} {% block content %}
+
+<H1>CONTACTO</H1>
+<div class="container miformulario">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table style="margin: 20px auto;">{{miformulario.as_table}}</table>
+        <input type="submit" value="Enviar" class="btn btn-success">
+    </form>
+</div>
+
+{% endblock %}

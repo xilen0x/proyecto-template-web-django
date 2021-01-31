@@ -271,3 +271,13 @@ ul.errorlist {
     font-style: italic;
     color: red;
 }
+
+
+/* mis estilos */
+
+.miformulario {
+    background-color: rgb(175, 223, 195);
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 10px;
+}
