@@ -128,3 +128,11 @@ STATIC_URL = '/static/'
 #Para alojar las imágenes ademas de las siguentes 2 lineas, ver archivos models.py y urls.py:
 MEDIA_URL = '/media/' #url pública
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #path
+
+#config. de email(formulario contacto)
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')

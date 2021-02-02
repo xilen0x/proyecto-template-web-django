@@ -1,6 +1,16 @@
 {% extends "ProyectoWebApp/base.html" %} {% load static %} {% block content %}
 
 <H1>CONTACTO</H1>
+<!-- renderizado condicional -->
+{% if "valido" in request.GET %}
+<div class="container alert alert-success" role="alert">
+    Mensaje enviado exitosamente!
+</div>
+{% endif %} {% if "error" in request.GET %}
+<div class="container alert alert-danger" role="alert">
+    No fué posible enviar el mensaje. Intente más tarde!
+</div>
+{% endif %}
 <div class="container miformulario">
     <form action="" method="POST">
         {% csrf_token %}
